@@ -11,3 +11,10 @@
  *= require_self
  *= require_tree .
  */
+#container h1 {
+  margin: 50px 0;
+  width: 403px;
+  height: 200px;
+  background: url('/assets/logo.png');
+  text-indent: -9999px;
+}
