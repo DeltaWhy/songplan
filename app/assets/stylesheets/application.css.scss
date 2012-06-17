@@ -1,0 +1,140 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+
+/* * * * * * * * * * * * * *
+ * RESET
+ * * * * * * * * * * * * * */
+
+* { margin: 0; padding: 0; }
+
+/* * * * * * * * * * * * * *
+ * LAYOUT AND BACKGROUND
+ * * * * * * * * * * * * * */
+
+body { background: #eee; }
+
+#header {
+  height: 30px;
+  line-height: 30px;
+  padding: 0 0.5em 0 0.5em;
+  text-align: right;
+}
+
+#container { margin: 0 auto; }
+
+/* * * * * * * * * * * * * *
+ * MIXINS
+ * * * * * * * * * * * * * */
+
+@mixin rounded($radius: 5px) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+
+/* * * * * * * * * * * * * *
+ * CLASSES
+ * * * * * * * * * * * * * */
+.button {
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  font: 14px/100% Arial, Helvetica, sans-serif;
+  padding: .5em 2em .55em;
+  text-shadow: 0 1px 1px #fff;
+  @include rounded;
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+  -moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+  box-shadow: 0 1px 2px rgba(0,0,0,.2);
+
+	color: #000;
+	border: solid 1px #777;
+	background: #ccc;
+	background: -webkit-gradient(linear, left top, left bottom, from(#cfcfcf), to(#c0c0c0));
+
+  &.small {
+    font: 10px/100%;
+    padding: .3em 1.3em .45em;
+  }
+  &.large { font-size: 24px; }
+  &:hover {
+    text-decoration: none;
+
+    background: #bbb;
+    background: -webkit-gradient(linear, left top, left bottom, from(#bfbfbf), to(#b0b0b0));
+  }
+  &:active {
+    position: relative;
+    top: 1px;
+
+    color: #fff;
+    background: -webkit-gradient(linear, left top, left bottom, from(#c0c0c0), to(#cfcfcf));
+  }
+
+  &.blue {
+    color: #000;
+    border: solid 1px #28c;
+    background: #8bc;
+    background: -webkit-gradient(linear, left top, left bottom, from(#8fbfcf), to(#80b0c0));
+
+    &:hover {
+      background: #7ab;
+      background: -webkit-gradient(linear, left top, left bottom, from(#7fafbf), to(#70a0b0));
+    }
+
+    &:active {
+      color: #fff;
+      background: -webkit-gradient(linear, left top, left bottom, from(#80b0c0), to(#8fbfcf));
+    }
+  }
+
+  &.red {
+    color: #000;
+    border: solid 1px #c22;
+    background: #c46;
+    background: -webkit-gradient(linear, left top, left bottom, from(#cf4f6f), to(#c04060));
+
+    &:hover {
+      background: #b35;
+      background: -webkit-gradient(linear, left top, left bottom, from(#bf3f5f), to(#b03050));
+    }
+
+    &:active {
+      color: #fff;
+      background: -webkit-gradient(linear, left top, left bottom, from(#c04060), to(#cf4f6f));
+    }
+  }
+}
+
+/* * * * * * * * * * * * * *
+ * PAGES
+ * * * * * * * * * * * * * */
+
+body.home {
+  #container {
+    text-align: center;
+
+    h1 {
+      margin: 50px auto;
+      width: 403px;
+      height: 200px;
+      background: url('/assets/logo.png');
+      text-indent: -9999px;
+    }
+  }
+}
