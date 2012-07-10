@@ -1,0 +1,45 @@
+<h1>Listing songs</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Slug</th>
+    <th>Author</th>
+    <th>Short author</th>
+    <th>Copyright</th>
+    <th>Ccli number</th>
+    <th>Original key</th>
+    <th>Chords</th>
+    <th>Default order</th>
+    <th>Two columns</th>
+    <th>Tags</th>
+    <th>Notes</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @songs.each do |song| %>
+  <tr>
+    <td><%= song.title %></td>
+    <td><%= song.slug %></td>
+    <td><%= song.author %></td>
+    <td><%= song.short_author %></td>
+    <td><%= song.copyright %></td>
+    <td><%= song.ccli_number %></td>
+    <td><%= song.original_key %></td>
+    <td><%= song.chords %></td>
+    <td><%= song.default_order %></td>
+    <td><%= song.two_columns %></td>
+    <td><%= song.tags %></td>
+    <td><%= song.notes %></td>
+    <td><%= link_to 'Show', song %></td>
+    <td><%= link_to 'Edit', edit_song_path(song) %></td>
+    <td><%= link_to 'Destroy', song, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Song', new_song_path %>

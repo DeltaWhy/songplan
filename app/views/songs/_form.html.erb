@@ -1,0 +1,65 @@
+<%= form_for(@song) do |f| %>
+  <% if @song.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@song.errors.count, "error") %> prohibited this song from being saved:</h2>
+
+      <ul>
+      <% @song.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :slug %><br />
+    <%= f.text_field :slug %>
+  </div>
+  <div class="field">
+    <%= f.label :author %><br />
+    <%= f.text_field :author %>
+  </div>
+  <div class="field">
+    <%= f.label :short_author %><br />
+    <%= f.text_field :short_author %>
+  </div>
+  <div class="field">
+    <%= f.label :copyright %><br />
+    <%= f.text_field :copyright %>
+  </div>
+  <div class="field">
+    <%= f.label :ccli_number %><br />
+    <%= f.text_field :ccli_number %>
+  </div>
+  <div class="field">
+    <%= f.label :original_key %><br />
+    <%= f.text_field :original_key %>
+  </div>
+  <div class="field">
+    <%= f.label :chords %><br />
+    <%= f.text_field :chords %>
+  </div>
+  <div class="field">
+    <%= f.label :default_order %><br />
+    <%= f.text_field :default_order %>
+  </div>
+  <div class="field">
+    <%= f.label :two_columns %><br />
+    <%= f.check_box :two_columns %>
+  </div>
+  <div class="field">
+    <%= f.label :tags %><br />
+    <%= f.text_field :tags %>
+  </div>
+  <div class="field">
+    <%= f.label :notes %><br />
+    <%= f.text_field :notes %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

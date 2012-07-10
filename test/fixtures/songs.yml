@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  slug: MyString
+  author: MyString
+  short_author: MyString
+  copyright: MyString
+  ccli_number: MyString
+  original_key: MyString
+  chords: MyString
+  default_order: MyString
+  two_columns: false
+  tags: MyString
+  notes: MyString
+
+two:
+  title: MyString
+  slug: MyString
+  author: MyString
+  short_author: MyString
+  copyright: MyString
+  ccli_number: MyString
+  original_key: MyString
+  chords: MyString
+  default_order: MyString
+  two_columns: false
+  tags: MyString
+  notes: MyString

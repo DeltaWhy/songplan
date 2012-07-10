@@ -1,0 +1,65 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @song.title %>
+</p>
+
+<p>
+  <b>Slug:</b>
+  <%= @song.slug %>
+</p>
+
+<p>
+  <b>Author:</b>
+  <%= @song.author %>
+</p>
+
+<p>
+  <b>Short author:</b>
+  <%= @song.short_author %>
+</p>
+
+<p>
+  <b>Copyright:</b>
+  <%= @song.copyright %>
+</p>
+
+<p>
+  <b>Ccli number:</b>
+  <%= @song.ccli_number %>
+</p>
+
+<p>
+  <b>Original key:</b>
+  <%= @song.original_key %>
+</p>
+
+<p>
+  <b>Chords:</b>
+  <%= @song.chords %>
+</p>
+
+<p>
+  <b>Default order:</b>
+  <%= @song.default_order %>
+</p>
+
+<p>
+  <b>Two columns:</b>
+  <%= @song.two_columns %>
+</p>
+
+<p>
+  <b>Tags:</b>
+  <%= @song.tags %>
+</p>
+
+<p>
+  <b>Notes:</b>
+  <%= @song.notes %>
+</p>
+
+
+<%= link_to 'Edit', edit_song_path(@song) %> |
+<%= link_to 'Back', songs_path %>
