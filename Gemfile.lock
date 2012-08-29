@@ -29,6 +29,7 @@ GEM
       i18n (~> 0.6)
       multi_json (~> 1.0)
     arel (3.0.2)
+    bootstrap-sass (2.0.4.1)
     builder (3.0.0)
     chunky_png (1.2.5)
     coffee-rails (3.2.2)
@@ -44,8 +45,6 @@ GEM
       sass (~> 3.1)
     compass-rails (1.0.3)
       compass (>= 0.12.2, < 0.14)
-    compass_twitter_bootstrap (2.0.3)
-      compass
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
@@ -118,9 +117,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bootstrap-sass
   coffee-rails (~> 3.2.1)
   compass-rails
-  compass_twitter_bootstrap
   haml
   jquery-rails
   json

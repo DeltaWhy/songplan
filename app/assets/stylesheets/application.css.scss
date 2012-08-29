@@ -1,15 +1,5 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the top of the
- * compiled file, but it's generally better to create a new file per style scope.
- *
  *= require_self
- *= require_tree .
  */
 
 $bodyBackground: #eee;
@@ -18,7 +8,9 @@ $sansFontFamily: Tahoma, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 //$monoFontFamily
 $linkColor: #04f;
 
-@import "compass_twitter_bootstrap";
+@import "bootstrap";
+@import "compass";
+@import "songs";
 
 /* * * * * * * * * * * * * *
  * LAYOUT AND BACKGROUND
@@ -54,7 +46,7 @@ $linkColor: #04f;
   font: 14px/100% Arial, Helvetica, sans-serif;
   padding: .5em 2em .55em;
   text-shadow: 0 1px 1px #fff;
-  @include border-radius;
+  @include border-radius(5px);
   @include box-shadow(0 2px 3px rgba(0,0,0,.2));
 
   color: #000;
