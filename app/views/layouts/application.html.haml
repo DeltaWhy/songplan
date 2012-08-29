@@ -1,0 +1,17 @@
+!!!html5
+%html
+  %head
+    %title SongPlan
+    = stylesheet_link_tag    "application", :media => "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+  %body{:class => body_classes.join(' ')}
+    -if flash[:error]
+      #flash-error= flash[:error]
+    -if flash[:notice]
+      #flash-notice= flash[:notice]
+    #wrapper
+      #header
+        =link_to "Sign in", '#'
+      #container
+        = yield

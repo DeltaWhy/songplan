@@ -1,0 +1,31 @@
+%h2= @song.title
+
+=link_to 'Edit', edit_song_path(@song), :class => 'btn btn-primary'
+=link_to 'Destroy', song_path(@song), :method => :delete, :class => 'btn btn-danger'
+
+.song-meta
+  %p
+    %strong Author
+    =@song.author
+
+  -if @song.copyright.present?
+    %p
+      %strong Copyright
+      =@song.copyright
+
+  -if @song.ccli_number.present?
+    %p
+      %strong CCLI Number
+      =@song.ccli_number
+
+  %p
+    %strong Tags
+    =@song.tags
+
+  -if @song.notes.present?
+    %p
+      %strong Notes
+      %br
+      =@song.notes
+
+%pre= @song.chords
