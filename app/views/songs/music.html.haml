@@ -1,0 +1,12 @@
+!!!html5
+%html
+  %head
+    %title #{@song.title} (#{@key})
+    = stylesheet_link_tag "music", :media => "all"
+  %body.songs.music
+    .noprint
+      Key:
+      -Song::VALID_KEYS.each do |key|
+        =link_to_unless key == @key, key, transpose_song_path(@song, key.capitalize.tr('#b','+-'))
+    %h1 #{@song.title} (#{@key})
+    = find_and_preserve formatted_chords(@song), 'div'

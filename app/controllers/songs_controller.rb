@@ -17,7 +17,14 @@ class SongsController < ApplicationController
     @song = Song.find(params[:id])
 
     respond_to do |format|
-      format.html # show.html.erb
+      format.html {
+        if params[:key].present?
+          @key = params[:key].capitalize.tr('+-','#b')
+          render 'music', :layout => false
+        else
+          render 'show'
+        end
+      }
       format.json { render :json => @song }
     end
   end
