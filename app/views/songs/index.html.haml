@@ -7,14 +7,12 @@
     %th Tags
     %th
     %th
-    %th
 
   -@songs.each do |song|
-    %tr 
-      %td= song.title
-      %td= song.short_author
+    %tr
+      %td= link_to song.title, song
+      %td= song.get_short_author
       %td= song.tags
-      %td= link_to 'Show', song
       %td= link_to 'Edit', edit_song_path(song)
       %td= link_to 'Destroy', song, :confirm => 'Are you sure?', :method => :delete
 %br

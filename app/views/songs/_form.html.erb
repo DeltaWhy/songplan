@@ -11,53 +11,60 @@
     </div>
   <% end %>
 
+  <div class="row">
+    <div class="span6">
+      <div class="field">
+        <%= f.label :title %>
+        <%= f.text_field :title %>
+      </div>
+      <div class="field">
+        <%= f.label :slug %>
+        <%= f.text_field :slug %>
+      </div>
+      <div class="field">
+        <%= f.label :author %>
+        <%= f.text_field :author %>
+      </div>
+      <div class="field">
+        <%= f.label :short_author %>
+        <%= f.text_field :short_author %>
+      </div>
+      <div class="field">
+        <%= f.label :copyright %>
+        <%= f.text_field :copyright %>
+      </div>
+    </div>
+    <div class="span6">
+      <div class="field">
+        <%= f.label :ccli_number %>
+        <%= f.text_field :ccli_number %>
+      </div>
+      <div class="field">
+        <%= f.label :default_order %>
+        <%= f.text_field :default_order %>
+      </div>
+      <div class="field">
+        <%= f.label :two_columns %>
+        <%= f.check_box :two_columns %>
+      </div>
+      <div class="field">
+        <%= f.label :tags %>
+        <%= f.text_field :tags %>
+      </div>
+      <div class="field">
+        <%= f.label :notes %>
+        <%= f.text_field :notes %>
+      </div>
+    </div>
+  </div>
+  <hr/>
   <div class="field">
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
+    <%= f.label :original_key %>
+    <%= f.select :original_key, Song::VALID_KEYS %>
   </div>
   <div class="field">
-    <%= f.label :slug %><br />
-    <%= f.text_field :slug %>
-  </div>
-  <div class="field">
-    <%= f.label :author %><br />
-    <%= f.text_field :author %>
-  </div>
-  <div class="field">
-    <%= f.label :short_author %><br />
-    <%= f.text_field :short_author %>
-  </div>
-  <div class="field">
-    <%= f.label :copyright %><br />
-    <%= f.text_field :copyright %>
-  </div>
-  <div class="field">
-    <%= f.label :ccli_number %><br />
-    <%= f.text_field :ccli_number %>
-  </div>
-  <div class="field">
-    <%= f.label :original_key %><br />
-    <%= f.text_field :original_key %>
-  </div>
-  <div class="field">
-    <%= f.label :chords %><br />
-    <%= f.text_field :chords %>
-  </div>
-  <div class="field">
-    <%= f.label :default_order %><br />
-    <%= f.text_field :default_order %>
-  </div>
-  <div class="field">
-    <%= f.label :two_columns %><br />
-    <%= f.check_box :two_columns %>
-  </div>
-  <div class="field">
-    <%= f.label :tags %><br />
-    <%= f.text_field :tags %>
-  </div>
-  <div class="field">
-    <%= f.label :notes %><br />
-    <%= f.text_field :notes %>
+    <%= f.label :chords %>
+    <%= f.text_area :chords %>
   </div>
   <div class="actions">
     <%= f.submit %>
