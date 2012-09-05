@@ -9,4 +9,4 @@
       -Song::VALID_KEYS.each do |key|
         =link_to_unless key == @key, key, transpose_song_path(@song, key.capitalize.tr('#b','+-'))
     %h1 #{@song.title} (#{@key})
-    = find_and_preserve formatted_chords(@song), 'div'
+    = find_and_preserve formatted_chords(@song, @key), 'div'
